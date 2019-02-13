@@ -125,14 +125,14 @@ class TileTile(Model):
     sequence = fields.Integer(default=0, required=True)
 
     # Constraint Section
-    def _check_model_id_field_id(self, cr, uid, ids, context=None):
-        for t in self.browse(cr, uid, ids, context=context):
+    def _check_model_id_field_id(self,  ids, context=None):
+        for t in self.browse( ids, context=context):
             if t.field_id and t.field_id.model_id.id != t.model_id.id:
                 return False
         return True
 
-    def _check_field_id_field_function(self, cr, uid, ids, context=None):
-        for t in self.browse(cr, uid, ids, context=context):
+    def _check_field_id_field_function(self,  ids, context=None):
+        for t in self.browse( ids, context=context):
             if t.field_id and not t.field_function or\
                     t.field_function and not t.field_id:
                 return False
