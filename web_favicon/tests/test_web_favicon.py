@@ -3,9 +3,10 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import base64
+
+from odoo import http
 from odoo.tests.common import TransactionCase
 from odoo.tools.misc import file_open
-from odoo import http
 
 
 class FakeRequest(object):
