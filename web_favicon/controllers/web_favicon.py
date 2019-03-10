@@ -3,8 +3,9 @@
 # Copyright 2017 QubiQ 2010 <http://www.qubiq.es>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from io import BytesIO
 import base64
+from io import BytesIO
+
 from odoo import http
 from odoo.tools.misc import file_open
 
